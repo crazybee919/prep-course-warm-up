@@ -1,6 +1,11 @@
 export {};
+interface book{
+title:string;
+author:string;
+isRead:boolean;
+}
 
-const library = [
+const library:book[] = [
   {
     title: "The Road Ahead",
     author: "Bill Gates",
@@ -18,8 +23,14 @@ const library = [
   }
 ];
 
-const showStatus = () => {};
-
+const showStatus = (library:book[]) => {
+  for (let i = 0; i < library.length; i++) {
+    const writer = library[i];
+  if(writer.isRead){
+    console.log(` Already read ${writer.title} by ${writer.author}`);
+  } else console.log(`You still need to read ${writer.title} by ${writer.author}`);
+};
+}
 showStatus(library);
 
 /*

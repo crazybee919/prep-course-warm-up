@@ -8,4 +8,9 @@ export {};
  *  - https://javascript.info/array
  */
 
+function stringToArray(string: string) {
+return string
+}
+
 console.log(stringToArray(["John Doe"])); // Expected output: ['John', 'Doe']
+ 

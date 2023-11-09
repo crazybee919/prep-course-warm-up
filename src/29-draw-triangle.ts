@@ -5,7 +5,14 @@ export {};
  *  - https://blog.codeanalogies.com/2017/11/07/javascript-for-loops-explained/
  */
 
-function draw() {}
+function draw(cipars:number) {
+    let arr = [];
+    for(let i = 0; i<cipars; i++){
+
+        arr.push("*")
+console.log(arr)
+    }
+}
 
 draw(3);
 /* Expected output:

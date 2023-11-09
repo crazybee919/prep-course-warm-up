@@ -5,7 +5,13 @@ export {};
  *
  *  - 1, 4 will return 1 + 2 + 3 + 4 which is 10
  */
-
-const sumAll = function() {};
+let sum:number = 0
+let arr:number[] = [];
+const sumAll = function(first:number,second:number) {
+for(let i = 0; i<second +1;i++){
+    sum = sum + i
+}
+return sum
+}
 
 console.log(sumAll(1, 4)); // Expected output: 10

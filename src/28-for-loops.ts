@@ -9,7 +9,30 @@ export {};
  *  - https://www.youtube.com/watch?v=Kn06785pkJg (JavaScript Loops Made Easy)
 */
 
-function goThroughNumbers(start, end) {}
+function goThroughNumbers(start:number, end:number) {
+    // ja start lielaks par end tad error
+    if(start>end){
+        throw('invalid input')
+    }
+    // uzstaisiju arrayus
+    const arr = [];
+    for (let i = start-1; i < end; i++) {
+      arr[i] = i + 1;
+    }
+    // izfiltresu ara tuksas vietas array
+const newArr = arr.filter((a) => a);
+    //console.log(arr)
+   // console.log(newArr)
+// japarbauda vai katrs array skaitlis dalaas ar 2                       ||| kkas te nav lidz galam     ...........................
+for( let i = 0 ; i < newArr.length; i++){
+   // console.log(newArr[i])
+if((newArr[i]%2) === 0){
+    console.log("even")
+}else
+console.log("odd")
+}
+
+}
 
 goThroughNumbers(3, 7);
 /* Expected output:
