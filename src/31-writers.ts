@@ -4,8 +4,15 @@ export {};
  * Loop over the array and for each alive writer print out the following:
  * "Hi, my name is {firstName} {lastName}. I am {age} years old, and work as a {occupation}."
  */
+interface book {
+  firstName:string;
+  lastName:string;
+  occupation:string;
+  age:number;
+  alive:boolean;
+}
 
-const writers = [
+let writers:book[] = [
   {
     firstName: "Virginia",
     lastName: "Woolf",
@@ -35,3 +42,10 @@ const writers = [
     alive: true
   }
 ];
+for (let i = 0; i < writers.length; i++) {
+  const writer = writers[i];
+
+  if (writer.alive) {
+    console.log(`Hi, my name is ${writer.firstName} ${writer.lastName}. I am ${writer.age} years old, and work as a ${writer.occupation}.`);
+  }
+}
